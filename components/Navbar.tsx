@@ -48,22 +48,22 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${isScrolled
             ? "bg-slate-950/95 shadow-xl backdrop-blur-lg"
             : "bg-transparent"
-        }`}
+          }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
           {/* Logo */}
-
-          <a
-            href="#home"
-            className="flex items-center gap-3"
-          >
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-violet-600 to-cyan-500 text-2xl font-bold text-white shadow-lg">
-              NG
+          
+          <a href="#home" className="flex items-center gap-3">
+            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg">
+              <img
+                src="/logo.png"
+                alt="NextGrid Nexus Logo"
+                className="h-full w-full object-contain"
+              />
             </div>
 
             <div>

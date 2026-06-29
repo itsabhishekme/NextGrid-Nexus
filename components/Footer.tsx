@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   const quickLinks = [
     { name: "Home", href: "#home" },
@@ -151,126 +153,127 @@ export default function Footer() {
       </section>
 
       {/* Main Footer */}
+      <section className="relative overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute -left-32 top-0 h-80 w-80 rounded-full bg-violet-600/20 blur-3xl" />
+        <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl" />
 
-      <section>
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
 
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-4">
-
-          {/* Brand */}
-
+          {/* ================= Brand ================= */}
           <div>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md">
 
-            <h2 className="text-4xl font-extrabold text-white">
-              NextGrid Nexus
-            </h2>
+              <div className="flex items-center gap-5">
 
-            <p className="mt-6 leading-8 text-gray-400">
-              NextGrid Nexus is a modern Fashion Technology platform dedicated
-              to showcasing innovation through artificial intelligence,
-              sustainable fashion, smart textiles, wearable technology,
-              immersive experiences, and digital transformation.
-            </p>
+                <div className="rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-500 p-2 shadow-xl">
+                  <Image
+                    src="/logo.png"
+                    alt="NextGrid Nexus"
+                    width={70}
+                    height={70}
+                    priority
+                    className="rounded-xl bg-white p-2"
+                  />
+                </div>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+                <div>
+                  <h2 className="text-3xl font-extrabold text-white">
+                    NextGrid Nexus
+                  </h2>
 
-              {socialLinks.map((social) => (
+                  <p className="mt-1 text-sm uppercase tracking-[0.3em] text-violet-300">
+                    Fashion • AI • Innovation
+                  </p>
+                </div>
 
-                <a
-                  key={social.name}
-                  href={social.url}
-                  className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-800 text-2xl transition hover:bg-violet-600"
-                >
-                  {social.icon}
-                </a>
+              </div>
 
-              ))}
+              <p className="mt-8 leading-8 text-gray-300">
+                NextGrid Nexus is a next-generation Fashion Technology platform
+                exploring Artificial Intelligence, Sustainable Fashion, Smart
+                Textiles, Wearable Technology, Digital Experiences, and Future
+                Innovation.
+              </p>
+
+              <div className="mt-8 flex gap-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    className="group flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 text-xl text-white transition-all duration-300 hover:-translate-y-2 hover:border-violet-500 hover:bg-gradient-to-r hover:from-violet-600 hover:to-cyan-500"
+                  >
+                    <span className="transition-transform duration-300 group-hover:scale-110">
+                      {social.icon}
+                    </span>
+                  </a>
+                ))}
+              </div>
 
             </div>
-
           </div>
 
-          {/* Quick Links */}
-
+          {/* ================= Quick Links ================= */}
           <div>
-
-            <h3 className="mb-8 text-2xl font-bold text-white">
+            <h3 className="mb-8 text-xl font-bold text-white">
               Quick Links
             </h3>
 
-            <ul className="space-y-4">
-
+            <ul className="space-y-5">
               {quickLinks.map((link) => (
-
                 <li key={link.name}>
-
                   <a
                     href={link.href}
-                    className="transition hover:text-violet-400"
+                    className="group flex items-center text-gray-400 transition hover:text-white"
                   >
+                    <span className="mr-3 h-2 w-2 rounded-full bg-violet-500 transition-all group-hover:w-5"></span>
                     {link.name}
                   </a>
-
                 </li>
-
               ))}
-
             </ul>
-
           </div>
 
-          {/* Technologies */}
-
+          {/* ================= Technologies ================= */}
           <div>
-
-            <h3 className="mb-8 text-2xl font-bold text-white">
+            <h3 className="mb-8 text-xl font-bold text-white">
               Technologies
             </h3>
 
-            <ul className="space-y-4">
-
+            <ul className="space-y-5">
               {technologies.map((item) => (
-
                 <li key={item}>
-                  <span className="transition hover:text-cyan-400">
+                  <span className="group flex cursor-pointer items-center text-gray-400 transition hover:text-cyan-400">
+                    <span className="mr-3 h-2 w-2 rounded-full bg-cyan-400 transition-all group-hover:w-5"></span>
                     {item}
                   </span>
                 </li>
-
               ))}
-
             </ul>
-
           </div>
 
-          {/* Resources */}
-
+          {/* ================= Resources ================= */}
           <div>
-
-            <h3 className="mb-8 text-2xl font-bold text-white">
+            <h3 className="mb-8 text-xl font-bold text-white">
               Resources
             </h3>
 
-            <ul className="space-y-4">
-
+            <ul className="space-y-5">
               {resources.map((item) => (
-
                 <li key={item}>
                   <a
                     href="#"
-                    className="transition hover:text-violet-400"
+                    className="group flex items-center text-gray-400 transition hover:text-violet-300"
                   >
+                    <span className="mr-3 h-2 w-2 rounded-full bg-violet-400 transition-all group-hover:w-5"></span>
                     {item}
                   </a>
                 </li>
-
               ))}
-
             </ul>
-
           </div>
 
         </div>
-
       </section>
 
       {/* Newsletter */}
