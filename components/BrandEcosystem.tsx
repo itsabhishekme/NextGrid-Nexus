@@ -205,11 +205,15 @@ export default function BrandEcosystem() {
                         </h2>
 
                         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-                            NextGrid is building a connected ecosystem of innovative digital brands
-                            focused on fashion technology, artificial intelligence, sustainability,
-                            commerce, design, manufacturing, retail, luxury, and future consumer
-                            experiences. Every brand addresses a unique segment while contributing to
-                            one unified vision of transforming the global fashion industry.
+                            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-600">
+                                <span className="bg-gradient-to-r from-slate-900 via-blue-700 to-cyan-600 bg-clip-text font-extrabold text-transparent">
+                                    NextGrid Style
+                                </span>{" "} is building a connected ecosystem of innovative digital brands
+                                focused on fashion technology, artificial intelligence, sustainability,
+                                commerce, design, manufacturing, retail, luxury, and future consumer
+                                experiences. Every brand addresses a unique segment while contributing to
+                                one unified vision of transforming the global fashion industry.
+                            </p>
                         </p>
 
                         <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
@@ -298,12 +302,16 @@ export default function BrandEcosystem() {
                         </h3>
 
                         <p className="mx-auto mt-6 max-w-4xl text-center text-lg leading-8 text-slate-600">
-                            Every NextGrid brand is created with a clear purpose—to solve real
-                            challenges across the fashion ecosystem using intelligent technologies,
-                            sustainable practices, data-driven insights, and modern digital
-                            experiences. Together, these platforms form an integrated innovation
-                            network that supports creators, retailers, manufacturers, startups, and
-                            global enterprises.
+                            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-600">
+                                <span className="bg-gradient-to-r from-slate-900 via-blue-700 to-cyan-600 bg-clip-text font-extrabold text-transparent">
+                                    NextGrid Style
+                                </span>{" "} brand is created with a clear purpose—to solve real
+                                challenges across the fashion ecosystem using intelligent technologies,
+                                sustainable practices, data-driven insights, and modern digital
+                                experiences. Together, these platforms form an integrated innovation
+                                network that supports creators, retailers, manufacturers, startups, and
+                                global enterprises.
+                            </p>
                         </p>
 
                         <p className="mx-auto mt-6 max-w-4xl text-center text-lg leading-8 text-slate-600">
