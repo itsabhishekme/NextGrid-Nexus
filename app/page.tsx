@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Technology from "../components/Technology";
+import BrandEcosystem from "../components/BrandEcosystem";
 import Collection from "../components/Collection";
 import Gallery from "../components/Gallery";
 import Contact from "../components/Contact";
@@ -9,8 +10,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
-
+    <main className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900">
       {/* Navigation */}
       <Navbar />
 
@@ -20,7 +20,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="py-24 px-6 lg:px-16 bg-white"
+        className="bg-white px-6 py-24 lg:px-16"
       >
         <About />
       </section>
@@ -28,15 +28,23 @@ export default function Home() {
       {/* Technology Section */}
       <section
         id="technology"
-        className="py-24 px-6 lg:px-16 bg-slate-100"
+        className="bg-slate-100 px-6 py-24 lg:px-16"
       >
         <Technology />
+      </section>
+
+      {/* Brand Ecosystem Section */}
+      <section
+        id="brands"
+        className="bg-white px-6 py-24 lg:px-16"
+      >
+        <BrandEcosystem />
       </section>
 
       {/* Collection Section */}
       <section
         id="collection"
-        className="py-24 px-6 lg:px-16 bg-white"
+        className="bg-slate-100 px-6 py-24 lg:px-16"
       >
         <Collection />
       </section>
@@ -44,7 +52,7 @@ export default function Home() {
       {/* Gallery Section */}
       <section
         id="gallery"
-        className="py-24 px-6 lg:px-16 bg-slate-100"
+        className="bg-white px-6 py-24 lg:px-16"
       >
         <Gallery />
       </section>
@@ -52,14 +60,13 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-24 px-6 lg:px-16 bg-white"
+        className="bg-slate-100 px-6 py-24 lg:px-16"
       >
         <Contact />
       </section>
 
       {/* Footer */}
       <Footer />
-
     </main>
   );
 }
