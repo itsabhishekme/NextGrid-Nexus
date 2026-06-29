@@ -141,111 +141,257 @@ export default function Contact() {
 
         <div className="grid gap-16 lg:grid-cols-2">
 
-          {/* Contact Form */}
+          {/* =========================
+              Contact Form
+           ========================= */}
 
-          <div className="rounded-3xl bg-white p-10 shadow-xl">
+          <section
+            aria-labelledby="contact-form-heading"
+            className="rounded-3xl bg-white p-8 shadow-xl md:p-10 lg:p-12"
+          >
+            {/* Header */}
 
-            <h3 className="mb-8 text-3xl font-bold text-gray-900">
-              Send a Message
-            </h3>
+            <header className="mb-10">
+              <span className="inline-flex rounded-full bg-violet-100 px-4 py-2 text-sm font-semibold text-violet-700">
+                Contact NextGrid Nexus
+              </span>
+
+              <h3
+                id="contact-form-heading"
+                className="mt-5 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl"
+              >
+                Send Us a Message
+              </h3>
+
+              <p className="mt-4 max-w-3xl leading-8 text-gray-600">
+                We'd love to hear from you. Whether you have questions about fashion
+                technology, artificial intelligence, partnerships, media inquiries,
+                research collaborations, or business opportunities, our team is here to
+                help.
+              </p>
+
+              <p className="mt-3 leading-8 text-gray-600">
+                Complete the contact form below and we'll respond as soon as possible.
+              </p>
+            </header>
+
+            {/* Success Message */}
 
             {submitted && (
-              <div className="mb-8 rounded-xl border border-green-300 bg-green-100 p-5 text-green-700">
-                Your message has been submitted successfully.
+              <div
+                role="status"
+                aria-live="polite"
+                className="mb-8 rounded-2xl border border-green-300 bg-green-50 p-5 text-green-700"
+              >
+                <p className="font-semibold">
+                  ✅ Your message has been submitted successfully.
+                </p>
+
+                <p className="mt-2 text-sm">
+                  Thank you for contacting NextGrid Nexus. We'll review your inquiry and
+                  get back to you shortly.
+                </p>
               </div>
             )}
 
+            {/* Form */}
+
             <form
               onSubmit={handleSubmit}
-              className="space-y-6"
+              className="space-y-7"
+              noValidate
             >
+              {/* Name */}
 
               <div className="grid gap-6 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="firstName"
+                    className="mb-2 block text-sm font-semibold text-gray-700"
+                  >
+                    First Name *
+                  </label>
 
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  required
-                  className="rounded-xl border p-4 outline-none transition focus:border-violet-600"
-                />
+                  <input
+                    id="firstName"
+                    type="text"
+                    name="firstName"
+                    autoComplete="given-name"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-xl border border-gray-300 p-4 transition focus:border-violet-600 focus:outline-none focus:ring-4 focus:ring-violet-100"
+                  />
+                </div>
 
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
-                  className="rounded-xl border p-4 outline-none transition focus:border-violet-600"
-                />
+                <div>
+                  <label
+                    htmlFor="lastName"
+                    className="mb-2 block text-sm font-semibold text-gray-700"
+                  >
+                    Last Name *
+                  </label>
 
+                  <input
+                    id="lastName"
+                    type="text"
+                    name="lastName"
+                    autoComplete="family-name"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-xl border border-gray-300 p-4 transition focus:border-violet-600 focus:outline-none focus:ring-4 focus:ring-violet-100"
+                  />
+                </div>
               </div>
+
+              {/* Email & Phone */}
 
               <div className="grid gap-6 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="mb-2 block text-sm font-semibold text-gray-700"
+                  >
+                    Email Address *
+                  </label>
 
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="rounded-xl border p-4 outline-none transition focus:border-violet-600"
-                />
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-xl border border-gray-300 p-4 transition focus:border-violet-600 focus:outline-none focus:ring-4 focus:ring-violet-100"
+                  />
+                </div>
 
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="rounded-xl border p-4 outline-none transition focus:border-violet-600"
-                />
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="mb-2 block text-sm font-semibold text-gray-700"
+                  >
+                    Phone Number
+                  </label>
 
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    autoComplete="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-gray-300 p-4 transition focus:border-violet-600 focus:outline-none focus:ring-4 focus:ring-violet-100"
+                  />
+                </div>
               </div>
 
-              <input
-                type="text"
-                name="company"
-                placeholder="Company / Organization"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full rounded-xl border p-4 outline-none transition focus:border-violet-600"
-              />
+              {/* Company */}
 
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full rounded-xl border p-4 outline-none transition focus:border-violet-600"
-              />
+              <div>
+                <label
+                  htmlFor="company"
+                  className="mb-2 block text-sm font-semibold text-gray-700"
+                >
+                  Company / Organization
+                </label>
 
-              <textarea
-                name="message"
-                placeholder="Tell us about your project..."
-                rows={7}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full rounded-xl border p-4 outline-none transition focus:border-violet-600"
-              />
+                <input
+                  id="company"
+                  type="text"
+                  name="company"
+                  autoComplete="organization"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full rounded-xl border border-gray-300 p-4 transition focus:border-violet-600 focus:outline-none focus:ring-4 focus:ring-violet-100"
+                />
+              </div>
+
+              {/* Subject */}
+
+              <div>
+                <label
+                  htmlFor="subject"
+                  className="mb-2 block text-sm font-semibold text-gray-700"
+                >
+                  Subject *
+                </label>
+
+                <input
+                  id="subject"
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-xl border border-gray-300 p-4 transition focus:border-violet-600 focus:outline-none focus:ring-4 focus:ring-violet-100"
+                />
+              </div>
+
+              {/* Message */}
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-sm font-semibold text-gray-700"
+                >
+                  Message *
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={7}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full rounded-xl border border-gray-300 p-4 leading-8 transition focus:border-violet-600 focus:outline-none focus:ring-4 focus:ring-violet-100"
+                />
+
+                <p className="mt-2 text-sm text-gray-500">
+                  Please provide as much detail as possible so we can assist you
+                  efficiently.
+                </p>
+              </div>
+
+              {/* Privacy Notice */}
+
+              <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                <p className="text-sm leading-7 text-gray-600">
+                  Your information will only be used to respond to your inquiry. We
+                  respect your privacy and do not sell or share your personal information
+                  with third parties.
+                </p>
+              </div>
+
+              {/* Button */}
 
               <button
                 type="submit"
-                className="w-full rounded-xl bg-violet-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-violet-700"
+                className="w-full rounded-xl bg-violet-600 px-8 py-4 text-lg font-semibold text-white transition-colors duration-300 hover:bg-violet-700 focus:outline-none focus:ring-4 focus:ring-violet-300"
               >
                 Send Message
               </button>
-
             </form>
 
-          </div>
+            {/* SEO Content */}
+
+            <footer className="mt-10 border-t border-gray-200 pt-8">
+              <h4 className="text-xl font-semibold text-gray-900">
+                Let's Build the Future Together
+              </h4>
+
+              <p className="mt-4 leading-8 text-gray-600">
+                NextGrid Nexus collaborates with fashion brands, AI startups, technology
+                companies, retailers, manufacturers, designers, researchers, investors,
+                and innovators worldwide. If you're interested in partnerships,
+                consulting, media opportunities, or digital transformation, we'd be happy
+                to connect and explore new possibilities.
+              </p>
+            </footer>
+          </section>
 
           {/* Right Panel */}
 

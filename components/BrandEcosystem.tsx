@@ -181,47 +181,139 @@ export default function BrandEcosystem() {
 
                 </div>
 
-                {/* Brand Cards */}
+                {/* =========================
+    NextGrid Brand Ecosystem
+========================= */}
 
-                <div className="mt-24 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+                <section
+                    id="nextgrid-brands"
+                    aria-labelledby="brands-heading"
+                    className="mt-28"
+                >
+                    {/* Section Header */}
 
-                    {brands.map((brand) => {
-                        const Icon = brand.icon;
+                    <header className="mx-auto mb-16 max-w-4xl text-center">
+                        <span className="inline-flex items-center rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold tracking-wide text-blue-700">
+                            NextGrid Ecosystem
+                        </span>
 
-                        return (
-                            <div
-                                key={brand.title}
-                                className="group relative overflow-hidden rounded-[32px] border border-slate-200 bg-white p-10 shadow-lg transition duration-500 hover:-translate-y-3 hover:shadow-2xl"
-                            >
-                                <div
-                                    className={`mb-8 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${brand.color} shadow-lg`}
+                        <h2
+                            id="brands-heading"
+                            className="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl"
+                        >
+                            Explore Our Brand Portfolio
+                        </h2>
+
+                        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+                            NextGrid is building a connected ecosystem of innovative digital brands
+                            focused on fashion technology, artificial intelligence, sustainability,
+                            commerce, design, manufacturing, retail, luxury, and future consumer
+                            experiences. Every brand addresses a unique segment while contributing to
+                            one unified vision of transforming the global fashion industry.
+                        </p>
+
+                        <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+                            Discover specialized platforms designed to empower creators,
+                            entrepreneurs, businesses, developers, researchers, and fashion
+                            professionals with next-generation technology and digital innovation.
+                        </p>
+                    </header>
+
+                    {/* Brand Cards */}
+
+                    <div
+                        className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
+                        role="list"
+                    >
+                        {brands.map((brand) => {
+                            const Icon = brand.icon;
+
+                            return (
+                                <article
+                                    key={brand.title}
+                                    role="listitem"
+                                    className="group relative overflow-hidden rounded-[32px] border border-slate-200 bg-white p-10 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:border-blue-300 hover:shadow-2xl"
                                 >
-                                    <Icon className="h-10 w-10 text-white" />
-                                </div>
+                                    {/* Background Decoration */}
 
-                                <h3 className="text-2xl font-bold text-slate-900">
-                                    {brand.title}
-                                </h3>
+                                    <div
+                                        aria-hidden="true"
+                                        className="absolute right-0 top-0 h-36 w-36 rounded-full bg-gradient-to-br from-slate-100 to-transparent opacity-60"
+                                    />
 
-                                <h4 className="mt-2 font-semibold text-blue-600">
-                                    {brand.subtitle}
-                                </h4>
+                                    {/* Icon */}
 
-                                <p className="mt-5 leading-7 text-slate-600">
-                                    {brand.description}
-                                </p>
+                                    <div
+                                        className={`relative mb-8 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br ${brand.color} shadow-lg transition-transform duration-300 group-hover:scale-110`}
+                                    >
+                                        <Icon
+                                            aria-hidden="true"
+                                            className="h-10 w-10 text-white"
+                                        />
+                                    </div>
 
-                                <div className="mt-8 flex items-center gap-2 font-semibold text-blue-600 transition group-hover:gap-4">
-                                    Explore Brand
-                                    <ArrowRight className="h-5 w-5" />
-                                </div>
+                                    {/* Title */}
 
-                                <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-gradient-to-br from-slate-100 to-transparent opacity-60" />
-                            </div>
-                        );
-                    })}
+                                    <h3 className="text-2xl font-bold text-slate-900">
+                                        {brand.title}
+                                    </h3>
 
-                </div>
+                                    {/* Subtitle */}
+
+                                    <p className="mt-2 font-semibold text-blue-600">
+                                        {brand.subtitle}
+                                    </p>
+
+                                    {/* Description */}
+
+                                    <p className="mt-5 leading-8 text-slate-600">
+                                        {brand.description}
+                                    </p>
+
+                                    {/* Divider */}
+
+                                    <div className="my-7 h-px bg-slate-200" />
+
+
+                                    {/* CTA */}
+
+                                    <div className="mt-8 flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
+                                        <span>Explore Brand</span>
+
+                                        <ArrowRight
+                                            aria-hidden="true"
+                                            className="h-5 w-5"
+                                        />
+                                    </div>
+                                </article>
+                            );
+                        })}
+                    </div>
+
+                    {/* Bottom Content */}
+
+                    <div className="mx-auto mt-24 max-w-6xl rounded-3xl bg-gradient-to-r from-slate-50 via-blue-50 to-cyan-50 p-12">
+                        <h3 className="text-center text-3xl font-bold text-slate-900">
+                            Building the Future Through Specialized Innovation
+                        </h3>
+
+                        <p className="mx-auto mt-6 max-w-4xl text-center text-lg leading-8 text-slate-600">
+                            Every NextGrid brand is created with a clear purpose—to solve real
+                            challenges across the fashion ecosystem using intelligent technologies,
+                            sustainable practices, data-driven insights, and modern digital
+                            experiences. Together, these platforms form an integrated innovation
+                            network that supports creators, retailers, manufacturers, startups, and
+                            global enterprises.
+                        </p>
+
+                        <p className="mx-auto mt-6 max-w-4xl text-center text-lg leading-8 text-slate-600">
+                            As our ecosystem continues to expand, each brand will introduce new
+                            products, educational resources, AI-powered tools, research initiatives,
+                            and community-driven experiences that help shape the next generation of
+                            fashion technology and digital commerce worldwide.
+                        </p>
+                    </div>
+                </section>
 
                 {/* Bottom CTA */}
 

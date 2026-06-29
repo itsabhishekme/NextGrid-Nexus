@@ -92,25 +92,6 @@ export default function Technology() {
     },
   ];
 
-  const statistics = [
-    {
-      value: "500+",
-      title: "AI Models",
-    },
-    {
-      value: "120+",
-      title: "Technology Partners",
-    },
-    {
-      value: "98%",
-      title: "Innovation Success",
-    },
-    {
-      value: "35+",
-      title: "Global Countries",
-    },
-  ];
-
   return (
     <section
       id="technology"
@@ -186,31 +167,6 @@ export default function Technology() {
                 ))}
 
               </div>
-
-            </div>
-
-          ))}
-
-        </div>
-
-        {/* Statistics */}
-
-        <div className="mt-24 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-
-          {statistics.map((item) => (
-
-            <div
-              key={item.title}
-              className="rounded-3xl bg-gradient-to-br from-violet-700 to-cyan-600 p-8 text-center text-white shadow-xl"
-            >
-
-              <h3 className="text-5xl font-extrabold">
-                {item.value}
-              </h3>
-
-              <p className="mt-4 text-violet-100">
-                {item.title}
-              </p>
 
             </div>
 
