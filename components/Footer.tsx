@@ -12,23 +12,65 @@ export default function Footer() {
   ];
 
   const technologies = [
-    "Artificial Intelligence",
-    "Smart Fabrics",
-    "Wearable Technology",
-    "Augmented Reality",
-    "Virtual Reality",
-    "3D Fashion Design",
+    {
+      name: "Artificial Intelligence",
+      href: "/technologies/artificial-intelligence",
+    },
+    {
+      name: "Smart Fabrics",
+      href: "/technologies/smart-fabrics",
+    },
+    {
+      name: "Wearable Technology",
+      href: "/technologies/wearable-technology",
+    },
+    {
+      name: "Augmented Reality",
+      href: "/technologies/augmented-reality",
+    },
+    {
+      name: "Virtual Reality",
+      href: "/technologies/virtual-reality",
+    },
+    {
+      name: "3D Fashion Design",
+      href: "/technologies/3d-fashion-design",
+    },
   ];
 
   const resources = [
-    "Blog",
-    "Research",
-    "Innovation",
-    "Case Studies",
-    "Developers",
-    "Documentation",
-    "Careers",
-    "Support",
+    {
+      name: "Blog",
+      href: "/resources/blog",
+    },
+    {
+      name: "Research",
+      href: "/resources/research",
+    },
+    {
+      name: "Innovation",
+      href: "/resources/innovation",
+    },
+    {
+      name: "Case Studies",
+      href: "/resources/case-studies",
+    },
+    {
+      name: "Developers",
+      href: "/resources/developers",
+    },
+    {
+      name: "Documentation",
+      href: "/resources/documentation",
+    },
+    {
+      name: "Careers",
+      href: "/resources/careers",
+    },
+    {
+      name: "Support",
+      href: "/resources/support",
+    },
   ];
 
   const socialLinks = [
@@ -241,11 +283,14 @@ export default function Footer() {
 
             <ul className="space-y-5">
               {technologies.map((item) => (
-                <li key={item}>
-                  <span className="group flex cursor-pointer items-center text-gray-400 transition hover:text-cyan-400">
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="group flex items-center text-gray-400 transition hover:text-cyan-400"
+                  >
                     <span className="mr-3 h-2 w-2 rounded-full bg-cyan-400 transition-all group-hover:w-5"></span>
-                    {item}
-                  </span>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -259,14 +304,14 @@ export default function Footer() {
 
             <ul className="space-y-5">
               {resources.map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
                     className="group flex items-center text-gray-400 transition hover:text-violet-300"
                   >
                     <span className="mr-3 h-2 w-2 rounded-full bg-violet-400 transition-all group-hover:w-5"></span>
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -339,11 +384,12 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-8">
+
             <Link
               href="/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-violet-400 transition-colors"
+              className="transition-colors hover:text-violet-400"
             >
               Privacy Policy
             </Link>
@@ -352,7 +398,7 @@ export default function Footer() {
               href="/terms-of-service"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-violet-400 transition-colors"
+              className="transition-colors hover:text-violet-400"
             >
               Terms of Service
             </Link>
@@ -361,7 +407,7 @@ export default function Footer() {
               href="/cookie-policy"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-violet-400 transition-colors"
+              className="transition-colors hover:text-violet-400"
             >
               Cookie Policy
             </Link>
@@ -370,7 +416,7 @@ export default function Footer() {
               href="/accessibility"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-violet-400 transition-colors"
+              className="transition-colors hover:text-violet-400"
             >
               Accessibility
             </Link>
@@ -382,5 +428,5 @@ export default function Footer() {
       </section>
 
     </footer>
-  );
+  )
 }
