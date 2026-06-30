@@ -118,10 +118,6 @@ export default function FragrancePage() {
 
         <div className="mx-auto max-w-7xl px-6 py-24 text-center">
 
-          <span className="rounded-full bg-fuchsia-500/20 px-5 py-2 text-sm font-semibold text-fuchsia-300">
-            NextGrid Style
-          </span>
-
           <h1 className="mt-8 text-5xl font-extrabold text-white lg:text-7xl">
             NextGrid
             <span className="block bg-gradient-to-r from-fuchsia-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
