@@ -6,10 +6,12 @@ import Collection from "../components/Collection";
 import Gallery from "../components/Gallery";
 import Contact from "../components/Contact";
 
-export default function Home() {
+export default async function Home() {
+  // Remove this after testing.
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   return (
     <main className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900">
-
       {/* Hero Section */}
       <Hero />
 
@@ -60,7 +62,6 @@ export default function Home() {
       >
         <Contact />
       </section>
-
     </main>
   );
 }
