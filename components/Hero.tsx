@@ -55,25 +55,26 @@ export default function Hero() {
           {/* Left Content */}
 
           <div>
-
+          
             <span className="inline-flex rounded-full bg-violet-600/20 px-5 py-2 text-sm font-semibold text-violet-300 ring-1 ring-violet-500">
-              🚀 Future of Fashion Technology
+              ✨ NextGrid Style • Powered by NextGrid Nexus
             </span>
 
             <h1 className="mt-8 text-5xl font-extrabold leading-tight md:text-6xl xl:text-7xl">
-              Fashion
+      
               <span className="block bg-gradient-to-r from-violet-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
-                Meets
+                Fashion. Intelligent Technology.
               </span>
-              Artificial Intelligence
+              One Vision.
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-              Welcome to <strong>NextGrid Nexus</strong>, where cutting-edge
-              technology transforms fashion into intelligent, sustainable,
-              interactive, and personalized experiences. Explore AI-powered
-              design, wearable technology, smart textiles, and the future of
-              digital fashion.
+              <strong>NextGrid Style</strong> creates clothing, contemporary
+              streetwear, and timeless fashion designed for comfort, quality, and modern
+              lifestyles. Powered by <strong>NextGrid Nexus</strong>, our technology
+              ecosystem pioneers Artificial Intelligence, wearable technology, smart
+              textiles, digital experiences, and fashion innovation—connecting style with
+              the future of intelligent commerce.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-5">
