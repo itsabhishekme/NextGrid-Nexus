@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
@@ -338,22 +339,41 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-8">
-
-            <a href="#" className="hover:text-violet-400">
+            <Link
+              href="/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-400 transition-colors"
+            >
               Privacy Policy
-            </a>
+            </Link>
 
-            <a href="#" className="hover:text-violet-400">
+            <Link
+              href="/terms-of-service"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-400 transition-colors"
+            >
               Terms of Service
-            </a>
+            </Link>
 
-            <a href="#" className="hover:text-violet-400">
+            <Link
+              href="/cookie-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-400 transition-colors"
+            >
               Cookie Policy
-            </a>
+            </Link>
 
-            <a href="#" className="hover:text-violet-400">
+            <Link
+              href="/accessibility"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-400 transition-colors"
+            >
               Accessibility
-            </a>
+            </Link>
 
           </div>
 
