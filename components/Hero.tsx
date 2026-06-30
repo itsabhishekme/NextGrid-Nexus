@@ -24,17 +24,13 @@ export default function Hero() {
 
   const technologies = [
     "Artificial Intelligence",
-    "Machine Learning",
     "Smart Fabrics",
     "Wearable Technology",
     "Digital Fashion",
     "3D Design",
     "Virtual Reality",
     "Augmented Reality",
-    "Blockchain",
     "Sustainable Materials",
-    "Cloud Computing",
-    "Future Commerce",
   ];
 
   return (

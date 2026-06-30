@@ -12,12 +12,10 @@ export default function Footer() {
 
   const technologies = [
     "Artificial Intelligence",
-    "Machine Learning",
     "Smart Fabrics",
     "Wearable Technology",
     "Augmented Reality",
     "Virtual Reality",
-    "Blockchain",
     "3D Fashion Design",
   ];
 

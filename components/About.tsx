@@ -203,8 +203,8 @@ export default function About() {
         </section>
 
         {/* =========================
-    Innovation Pillars
-========================= */}
+             Innovation Pillars
+           ========================= */}
 
         <section
           id="innovation-pillars"
