@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Technology from "../components/Technology";
@@ -6,13 +5,10 @@ import BrandEcosystem from "../components/BrandEcosystem";
 import Collection from "../components/Collection";
 import Gallery from "../components/Gallery";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900">
-      {/* Navigation */}
-      <Navbar />
 
       {/* Hero Section */}
       <Hero />
@@ -65,8 +61,6 @@ export default function Home() {
         <Contact />
       </section>
 
-      {/* Footer */}
-      <Footer />
     </main>
   );
 }

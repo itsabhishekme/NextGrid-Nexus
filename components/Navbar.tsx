@@ -18,15 +18,32 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const navigation = [
-    { title: "Home", href: "#home" },
-    { title: "About", href: "#about" },
-    { title: "Technology", href: "#technology" },
-    { title: "Collection", href: "#collection" },
-    { title: "Gallery", href: "#gallery" },
-    { title: "Contact", href: "#contact" },
-  ];
+const navigation = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Technology",
+    href: "/technology",
+  },
+  {
+    title: "Collection",
+    href: "/collection",
+  },
+  {
+    title: "Gallery",
+    href: "/gallery",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
 
   return (
     <>

@@ -121,20 +121,6 @@ export default function Hero() {
 
             </div>
 
-            {/* Floating Card 1 */}
-
-            <div className="absolute -left-10 top-16 rounded-2xl bg-white p-6 shadow-2xl">
-
-              <h3 className="text-4xl font-bold text-violet-600">
-                AI
-              </h3>
-
-              <p className="mt-2 text-gray-700">
-                Intelligent Fashion Design
-              </p>
-
-            </div>
-
             {/* Floating Card 2 */}
 
             <div className="absolute -right-10 bottom-20 rounded-2xl bg-white p-6 shadow-2xl">
