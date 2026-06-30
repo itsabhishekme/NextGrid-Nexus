@@ -137,10 +137,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* ================= SPACER ================= */}
-
-      <div className="h-24"></div>
     </>
   );
 }
