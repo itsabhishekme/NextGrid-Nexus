@@ -245,14 +245,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-white text-gray-900 antialiased selection:bg-violet-600 selection:text-white`}
+        className={`${inter.className} min-h-screen bg-white text-gray-900 antialiased selection:bg-violet-600 selection:text-white`}
       >
         <Navbar />
-
-        <main>
+        <main className="min-h-[calc(100vh-var(--navbar-height,0px))]">
           {children}
         </main>
-
         <Footer />
       </body>
     </html>
