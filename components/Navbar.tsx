@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,11 +33,10 @@ export default function Navbar() {
       {/* ================= NAVBAR ================= */}
 
       <header
-        className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${
-          isScrolled
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${isScrolled
             ? "bg-[#172554]/95 backdrop-blur-xl shadow-2xl border-b border-blue-500/20"
             : "bg-[#172554]"
-        }`}
+          }`}
       >
         <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 lg:px-8">
           {/* ================= LOGO ================= */}
@@ -78,13 +78,21 @@ export default function Navbar() {
           {/* ================= BUTTONS ================= */}
 
           <div className="hidden items-center gap-4 lg:flex">
-            <button className="rounded-xl border border-blue-400/40 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-cyan-400 hover:bg-white/10">
-              Login
-            </button>
 
-            <button className="rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/40">
+            <Link
+              href="/login"
+              className="rounded-xl border border-blue-400/40 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-cyan-400 hover:bg-white/10"
+            >
+              Login
+            </Link>
+
+            <Link
+              href="/get-started"
+              className="rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/40"
+            >
               Get Started
-            </button>
+            </Link>
+
           </div>
 
           {/* ================= MOBILE BUTTON ================= */}
@@ -101,11 +109,10 @@ export default function Navbar() {
       {/* ================= MOBILE MENU ================= */}
 
       <div
-        className={`fixed left-0 top-24 z-40 w-full overflow-hidden bg-[#172554] transition-all duration-500 lg:hidden ${
-          mobileMenuOpen
+        className={`fixed left-0 top-24 z-40 w-full overflow-hidden bg-[#172554] transition-all duration-500 lg:hidden ${mobileMenuOpen
             ? "max-h-screen opacity-100"
             : "max-h-0 opacity-0"
-        }`}
+          }`}
       >
         <div className="space-y-3 px-6 py-8">
           {navigation.map((item) => (
