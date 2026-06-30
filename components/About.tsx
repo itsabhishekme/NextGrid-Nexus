@@ -37,8 +37,8 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-6">
 
         {/* =========================
-    About NextGrid Nexus
-========================= */}
+            About NextGrid Nexus
+          ========================= */}
 
         <section
           id="about"
