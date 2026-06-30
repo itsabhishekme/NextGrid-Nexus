@@ -16,132 +16,146 @@ import {
     Home,
     Briefcase,
 } from "lucide-react";
+import Link from "next/link";
 
 const brands = [
-    {
-        title: "NextGrid Lifestyle",
-        subtitle: "Men's Fashion",
-        description:
-            "Sophisticated clothing crafted for modern gentlemen with timeless elegance.",
-        icon: Shirt,
-        color: "from-blue-500 via-cyan-500 to-sky-500",
-    },
-    {
-        title: "NextGrid HerStyle",
-        subtitle: "Women's Fashion",
-        description:
-            "Elegant collections celebrating confidence, beauty, and individuality.",
-        icon: Sparkles,
-        color: "from-pink-500 via-rose-500 to-fuchsia-500",
-    },
-    {
-        title: "NextGrid LittleStyle",
-        subtitle: "Kids Fashion",
-        description:
-            "Comfortable, playful and colorful apparel designed for every adventure.",
-        icon: Baby,
-        color: "from-orange-400 via-amber-400 to-yellow-500",
-    },
-    {
-        title: "NextGrid SoleStyle",
-        subtitle: "Footwear",
-        description:
-            "Luxury sneakers, formal shoes, sandals and everyday footwear engineered for style and comfort.",
-        icon: Footprints,
-        color: "from-violet-500 via-indigo-500 to-blue-600",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Spark",
-        subtitle: "Accessories & Jewelry",
-        description:
-            "Premium handbags, wallets, belts, watches, sunglasses and jewelry to elevate every look.",
-        icon: Gem,
-        color: "from-yellow-400 via-amber-500 to-orange-500",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid EcoWear",
-        subtitle: "Sustainable Fashion",
-        description:
-            "Eco-conscious collections created using ethical sourcing and recycled materials for a greener future.",
-        icon: Leaf,
-        color: "from-green-500 via-emerald-500 to-lime-500",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Active",
-        subtitle: "Sportswear & Athleisure",
-        description:
-            "Performance apparel and activewear designed for fitness, movement and everyday comfort.",
-        icon: Dumbbell,
-        color: "from-red-500 via-orange-500 to-yellow-500",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Beauty",
-        subtitle: "Cosmetics & Skincare",
-        description:
-            "Premium skincare, cosmetics, beauty essentials and personal care products crafted for modern lifestyles.",
-        icon: Brush,
-        color: "from-pink-500 via-rose-500 to-red-400",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Fragrance",
-        subtitle: "Luxury Perfumes",
-        description:
-            "Signature fragrances inspired by elegance, confidence and timeless sophistication.",
-        icon: Flower2,
-        color: "from-fuchsia-500 via-pink-500 to-purple-500",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Living",
-        subtitle: "Home & Lifestyle Products",
-        description:
-            "Modern home décor, everyday essentials and lifestyle products designed with premium quality.",
-        icon: Home,
-        color: "from-teal-500 via-cyan-500 to-sky-500",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid WorkStyle",
-        subtitle: "Formal & Corporate Wear",
-        description:
-            "Professional clothing and business essentials tailored for modern workplaces and executives.",
-        icon: Briefcase,
-        color: "from-slate-700 via-slate-800 to-black",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Time",
-        subtitle: "Watches & Wearables",
-        description:
-            "Luxury watches, smart wearables and timeless accessories that blend technology with style.",
-        icon: Watch,
-        color: "from-amber-500 via-orange-500 to-red-500",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Vision",
-        subtitle: "Eyewear",
-        description:
-            "Fashion-forward sunglasses and optical eyewear combining comfort, protection and premium design.",
-        icon: Glasses,
-        color: "from-indigo-500 via-blue-500 to-cyan-500",
-        status: "Upcoming",
-    },
-    {
-        title: "NextGrid Street",
-        subtitle: "Streetwear & Urban Fashion",
-        description:
-            "Contemporary streetwear inspired by youth culture, creativity and modern urban lifestyles.",
-        icon: Shirt,
-        color: "from-zinc-800 via-slate-700 to-gray-600",
-        status: "Upcoming",
-    },
-
+  {
+    title: "NextGrid Lifestyle",
+    subtitle: "Men's Fashion",
+    description:
+      "Sophisticated clothing crafted for modern gentlemen with timeless elegance.",
+    icon: Shirt,
+    color: "from-blue-500 via-cyan-500 to-sky-500",
+    href: "/nextgrid-style/lifestyle",
+  },
+  {
+    title: "NextGrid HerStyle",
+    subtitle: "Women's Fashion",
+    description:
+      "Elegant collections celebrating confidence, beauty, and individuality.",
+    icon: Sparkles,
+    color: "from-pink-500 via-rose-500 to-fuchsia-500",
+    href: "/nextgrid-style/herstyle",
+  },
+  {
+    title: "NextGrid LittleStyle",
+    subtitle: "Kids Fashion",
+    description:
+      "Comfortable, playful and colorful apparel designed for every adventure.",
+    icon: Baby,
+    color: "from-orange-400 via-amber-400 to-yellow-500",
+    href: "/nextgrid-style/littlestyle",
+  },
+  {
+    title: "NextGrid SoleStyle",
+    subtitle: "Footwear",
+    description:
+      "Luxury sneakers, formal shoes, sandals and everyday footwear engineered for style and comfort.",
+    icon: Footprints,
+    color: "from-violet-500 via-indigo-500 to-blue-600",
+    status: "Upcoming",
+    href: "/nextgrid-style/solestyle",
+  },
+  {
+    title: "NextGrid Spark",
+    subtitle: "Accessories & Jewelry",
+    description:
+      "Premium handbags, wallets, belts, watches, sunglasses and jewelry to elevate every look.",
+    icon: Gem,
+    color: "from-yellow-400 via-amber-500 to-orange-500",
+    status: "Upcoming",
+    href: "/nextgrid-style/spark",
+  },
+  {
+    title: "NextGrid EcoWear",
+    subtitle: "Sustainable Fashion",
+    description:
+      "Eco-conscious collections created using ethical sourcing and recycled materials for a greener future.",
+    icon: Leaf,
+    color: "from-green-500 via-emerald-500 to-lime-500",
+    status: "Upcoming",
+    href: "/nextgrid-style/ecowear",
+  },
+  {
+    title: "NextGrid Active",
+    subtitle: "Sportswear & Athleisure",
+    description:
+      "Performance apparel and activewear designed for fitness, movement and everyday comfort.",
+    icon: Dumbbell,
+    color: "from-red-500 via-orange-500 to-yellow-500",
+    status: "Upcoming",
+    href: "/nextgrid-style/active",
+  },
+  {
+    title: "NextGrid Beauty",
+    subtitle: "Cosmetics & Skincare",
+    description:
+      "Premium skincare, cosmetics, beauty essentials and personal care products crafted for modern lifestyles.",
+    icon: Brush,
+    color: "from-pink-500 via-rose-500 to-red-400",
+    status: "Upcoming",
+    href: "/nextgrid-style/beauty",
+  },
+  {
+    title: "NextGrid Fragrance",
+    subtitle: "Luxury Perfumes",
+    description:
+      "Signature fragrances inspired by elegance, confidence and timeless sophistication.",
+    icon: Flower2,
+    color: "from-fuchsia-500 via-pink-500 to-purple-500",
+    status: "Upcoming",
+    href: "/nextgrid-style/fragrance",
+  },
+  {
+    title: "NextGrid Living",
+    subtitle: "Home & Lifestyle Products",
+    description:
+      "Modern home décor, everyday essentials and lifestyle products designed with premium quality.",
+    icon: Home,
+    color: "from-teal-500 via-cyan-500 to-sky-500",
+    status: "Upcoming",
+    href: "/nextgrid-style/living",
+  },
+  {
+    title: "NextGrid WorkStyle",
+    subtitle: "Formal & Corporate Wear",
+    description:
+      "Professional clothing and business essentials tailored for modern workplaces and executives.",
+    icon: Briefcase,
+    color: "from-slate-700 via-slate-800 to-black",
+    status: "Upcoming",
+    href: "/nextgrid-style/workstyle",
+  },
+  {
+    title: "NextGrid Time",
+    subtitle: "Watches & Wearables",
+    description:
+      "Luxury watches, smart wearables and timeless accessories that blend technology with style.",
+    icon: Watch,
+    color: "from-amber-500 via-orange-500 to-red-500",
+    status: "Upcoming",
+    href: "/nextgrid-style/time",
+  },
+  {
+    title: "NextGrid Vision",
+    subtitle: "Eyewear",
+    description:
+      "Fashion-forward sunglasses and optical eyewear combining comfort, protection and premium design.",
+    icon: Glasses,
+    color: "from-indigo-500 via-blue-500 to-cyan-500",
+    status: "Upcoming",
+    href: "/nextgrid-style/vision",
+  },
+  {
+    title: "NextGrid Street",
+    subtitle: "Streetwear & Urban Fashion",
+    description:
+      "Contemporary streetwear inspired by youth culture, creativity and modern urban lifestyles.",
+    icon: Shirt,
+    color: "from-zinc-800 via-slate-700 to-gray-600",
+    status: "Upcoming",
+    href: "/nextgrid-style/street",
+  },
 ];
 
 export default function BrandEcosystem() {
@@ -182,8 +196,8 @@ export default function BrandEcosystem() {
                 </div>
 
                 {/* =========================
-    NextGrid Brand Ecosystem
-========================= */}
+                 NextGrid Brand Ecosystem
+                 ========================= */}
 
                 <section
                     id="nextgrid-brands"
@@ -281,14 +295,17 @@ export default function BrandEcosystem() {
 
                                     {/* CTA */}
 
-                                    <div className="mt-8 flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 group-hover:gap-4">
+                                    <Link
+                                        href={brand.href}
+                                        className="group mt-8 inline-flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 hover:gap-4"
+                                    >
                                         <span>Explore Brand</span>
 
                                         <ArrowRight
                                             aria-hidden="true"
-                                            className="h-5 w-5"
+                                            className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                                         />
-                                    </div>
+                                    </Link>
                                 </article>
                             );
                         })}
