@@ -62,7 +62,7 @@ const galleryItems = [
   {
     title: "AI Fashion Design",
     category: "Artificial Intelligence",
-    image: "/images/gallery/ai-fashion.jpg",
+    image: "/gallery/ai-fashion.jpg",
   },
   {
     title: "Luxury Fashion Collection",
@@ -72,7 +72,7 @@ const galleryItems = [
   {
     title: "Smart Fabrics",
     category: "Technology",
-    image: "/images/gallery/smart-fabric.jpg",
+    image: "/gallery/smart-fabric.jpg",
   },
   {
     title: "Wearable Technology",
